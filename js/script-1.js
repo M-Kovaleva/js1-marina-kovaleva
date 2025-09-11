@@ -1,1 +1,0 @@
-console.log("This is scrit 1");
