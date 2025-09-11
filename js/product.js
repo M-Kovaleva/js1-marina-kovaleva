@@ -26,7 +26,7 @@ async function fetchAndCreateProducts() {
         const form = document.createElement("form")
         const sizeLabel = document.createElement("label")
         const sizeSelect = document.createElement("select")
-        const addButton = document.createElement("button")
+        const addButton = document.createElement("cta-button")
 
        
 
@@ -37,7 +37,7 @@ async function fetchAndCreateProducts() {
         description.className = 'product-description'
         form.className = 'product-form'
         sizeLabel.textContent = 'Size: '
-        addButton.className = 'button'
+        addButton.className = 'cta-button'
     
 
         image.src = product.image.url
