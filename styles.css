@@ -32,7 +32,7 @@ body {
 }
 
 .hero {
-  background: url('../Images/Men-ski.jpg') center top no-repeat;
+  background: url('/Images/Men-ski.jpg') center top no-repeat;
   background-size: cover;
   min-height: 80vh;
   color: white;
