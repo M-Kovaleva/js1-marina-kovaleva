@@ -37,7 +37,7 @@ async function fetchAndCreateProducts() {
         description.className = 'product-description'
         form.className = 'product-form'
         sizeLabel.textContent = 'Size: '
-        addButton.className = 'cta-button'
+        addButton.className = 'button'
     
 
         image.src = product.image.url
