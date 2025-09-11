@@ -9,35 +9,48 @@
     <script src="js/cart.js" defer ></script>
 </head>
 <body>
-     <header class="header">
-        <a href="index.html"><img src="Logo/Logo.png" class="logo" ></a>
-        <nav class="nav">
-            <a href="index.html" aria-label="shopping cart" title="Cataloge"><i class="fa-solid fa-house"></i></a>  
-            <a href="cart.html" aria-label="shopping cart" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a>  
-        </nav>
-    </header>
-    
-    <main class="main-content">
-        <section id="cart-container" class="cart-container">
-            <h1>Cart</h1>
-            <div class="loader" id="loader"></div>
-            <div id="cart-empty" hidden>Your cart is empty.</div>
-            <div id="cart-items" class="cart-list"></div>
-            <div class="cart-summary">
-                <div>Items: <span id="cart-count">0</span></div>
-                <div>Subtotal: <span id="cart-total">0</span> $</div>
-                <a id="checkout-button" class="button" href="confirmation.html">Place order</a>
-                <div id="cart-error" class="error" hidden></div>
+  
+        <header class="header">
+            <a href="index.html"><img src="Logo/Logo.png" class="logo" ></a>
+            <nav class="nav">
+                <a href="index.html" aria-label="shopping cart" title="Cataloge"><i class="fa-solid fa-house"></i></a>  
+                <a href="cart.html" aria-label="shopping cart" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a>  
+            </nav>
+        </header>
+        
+        <main class="main-content">
+            
+
+            <section id="cart-container" class="cart-container">
+                <div class="nav-page">
+                    <nav>
+                        <a href="index.html">Catalog ></a>
+                        <a href="cart.html" class="active">Cart</a>
+                    </nav>
+                    
+                </div>
+                <h1>Cart</h1>
+                <div class="loader" id="loader"></div>
+                <div id="cart-empty" hidden>Your cart is empty.</div>
+                <div id="cart-items" class="cart-list"></div>
+                <div class="cart-summary">
+                    <div>Items: <span id="cart-count">0</span></div>
+                    <div>Subtotal: <span id="cart-total">0</span> $</div>
+                    <a id="checkout-button" class="cta-button" href="confirmation.html">Place order</a>
+                    <div id="cart-error" class="error" hidden></div>
+                </div>
+                <a href="index.html" class="active">Keep shopping</a>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>© Rainy Days</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" aria-label="link to facebook page" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com" aria-label="link to instagram page" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com" aria-label="link to youtube page" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
             </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <p>© Rainy Days</p>
-        <div class="social-icons">
-            <a href="https://www.facebook.com" aria-label="link to facebook page" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com" aria-label="link to instagram page" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com" aria-label="link to youtube page" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-    </footer>
+        </footer>
+
+        
 </body>
 </html>

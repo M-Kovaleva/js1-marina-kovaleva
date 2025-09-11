@@ -12,6 +12,8 @@ body {
   line-height: 1.6;
   text-align: left;
 }
+
+
 .header {
   background:  #245654;
   padding: 1rem 3rem;
@@ -319,12 +321,12 @@ main .loader {
    text-decoration: underline;
 }
 .product-form label {
-  font-size: 1.5rem; /* подгоняем под общий body */
+  font-size: 1.5rem; 
   font-weight: 500;
 }
 
 .product-form select {
-  font-size: 1.5rem; /* такой же, как у label */
+  font-size: 1.5rem; 
   padding: 0.4rem 0.8rem; 
   border-radius: 6px;
   border: 1px solid #ccc;
@@ -334,5 +336,60 @@ main .loader {
 }
 
 .product-form option {
-  font-size: 1.5rem; /* чтобы выпадающий список тоже совпадал */
+  font-size: 1.5rem; 
 }
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background: white;
+  border-radius: 8px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+}
+
+.cart-item h3{
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: normal;
+  color: #1F3D47;
+  line-height: 1.6;
+  text-align: left;
+}
+.cart-item h3, p{
+  margin: 0;
+}
+
+.cart-image-container {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-item-image {
+  max-width: 5%;
+  max-height: auto;
+  object-fit: contain;
+  padding-top: 0.5rem;
+}
+
+.remove-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+

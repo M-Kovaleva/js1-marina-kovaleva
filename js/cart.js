@@ -50,8 +50,9 @@ function renderCart() {
       const price = document.createElement("p");
       price.textContent = `$${item.price}`;
 
-      const removeBtn = document.createElement("button");
+      const removeBtn = document.createElement("active");
       removeBtn.textContent = "Remove";
+      removeBtn.className = "remove-link";
       removeBtn.addEventListener("click", () => {
         removeFromCart(index);
       });

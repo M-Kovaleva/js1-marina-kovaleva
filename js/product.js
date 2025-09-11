@@ -15,7 +15,7 @@ async function fetchAndCreateProducts() {
 
         const responce = await fetch(`${API_URL}/${id}`)
         const data = await responce.json()
-        await new Promise(res => setTimeout(res, 2000)) /* check loader*/
+        /*await new Promise(res => setTimeout(res, 2000)) /* check loader*/
         const product = data.data
 
         const productDiv = document.createElement("div")
@@ -69,7 +69,6 @@ async function fetchAndCreateProducts() {
             const selectedSize = sizeSelect.value
             addToCart(product, selectedSize)
             alert( `1 x ${product.title} (Size: ${selectedSize}) added to cart`)
-            window.location.href = "cart.html"
         })
       
         
