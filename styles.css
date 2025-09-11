@@ -1,0 +1,232 @@
+
+html {
+  scroll-behavior: smooth; /* scroll */
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: normal;
+  color: #1F3D47;
+  line-height: 1.6;
+  text-align: left;
+}
+.header {
+  background:  #245654;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.header a{
+  margin-right: 1rem;
+}
+.logo {
+  border-radius: 0;
+  float: left;
+  max-width: 8rem;
+  max-height: 4.8rem;
+
+}
+
+.hero {
+  background: url('../Images/Men-ski.jpg') center top no-repeat;
+  background-size: cover;
+  min-height: 80vh;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+h1{
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0px;
+}
+h2{
+  font-weight: 700;
+  font-size: 2.25rem;
+  color: #245654;
+  margin: 0;
+}
+.hero h1 {
+  padding-top: 40vh;
+  left: 50%;
+}
+
+.hero-cart h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0px;
+  padding-top: 30vh;
+  left: 50%;
+}
+
+.products {
+  padding: 3rem;
+  background-color: #F6EFD7;
+}
+
+.product-container img{
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+
+  
+.cart-container{
+    padding: 2rem;
+    background-color: #F6EFD7;;
+}
+
+.container {
+  /*max-width: 1440px;*/
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(302px, 1fr));
+  gap: 3rem;
+  align-items: stretch;
+}
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(31, 61, 71, 0.4);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 20px; 
+  box-sizing: border-box;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  opacity: 70%;
+}
+.card-image-container {
+  width: 100%;
+  padding: 10px; 
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+.card-image {
+  max-width: 100%;
+  max-height: 300px; 
+  object-fit: contain;
+}
+.card-content {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.card-title {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color:  #1F3D47;;
+  margin-bottom: 10px;
+}
+.product-title {
+  color:#1F3D47;;
+}
+
+.card-price {
+  font-size: 1.5rem;
+  color: #c23833;
+  font-weight: bold;
+}
+.card-price .old-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  background: #245654;
+  color:white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+.button:hover, button:hover { 
+  opacity: 0.7; }
+
+.cta-button  {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  background: #c23833 ;
+  color:white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+  
+.footer {
+  text-align: center;
+  background: #245654;
+  color: white;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.social-icons{
+  margin-right: 2rem;
+
+}
+.social-icons a{
+  margin-right: 1rem;
+
+}
+.footer p{
+  margin-left: 3rem;
+  
+}
+.loader {
+	  width: 1em;
+	  height: 1em;
+	  border: 0.15em solid;
+	  border-bottom-color: transparent;
+	  border-radius: 50%;
+	  display: inline-block;
+	  box-sizing: border-box;
+	  animation: rotation 1s linear infinite;
+	}
+	
+	@keyframes rotation {
+	  0% {
+	    transform: rotate(0deg);
+	  }
+	
+	  100% {
+	    transform: rotate(360deg);
+	  }
+	}
+main .loader {
+	font-size: 2em;
+}
