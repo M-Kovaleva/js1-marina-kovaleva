@@ -62,6 +62,34 @@ h2{
   padding-top: 30vh;
   left: 50%;
 }
+/* Стили для фильтра Gender на index.html */
+.filters label {
+  font-size: 1.5rem;   /* такой же размер, как у body */
+  font-weight: 500;
+  display: flex;       /* выравниваем текст и select по одной линии */
+  align-items: center;
+  gap: 0.5rem;         /* небольшой отступ между "Gender:" и селектом */
+}
+
+.filters select {
+  font-size: 1.5rem;   /* чтобы совпадал с label */
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #1F3D47;
+  cursor: pointer;
+}
+
+.filters option {
+  font-size: 1.5rem;   /* в выпадающем списке тоже */
+}
+#filters-form {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
 .products {
   padding: 3rem;
@@ -289,4 +317,22 @@ main .loader {
 }
 .active{
    text-decoration: underline;
+}
+.product-form label {
+  font-size: 1.5rem; /* подгоняем под общий body */
+  font-weight: 500;
+}
+
+.product-form select {
+  font-size: 1.5rem; /* такой же, как у label */
+  padding: 0.4rem 0.8rem; 
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #1F3D47;
+  cursor: pointer;
+}
+
+.product-form option {
+  font-size: 1.5rem; /* чтобы выпадающий список тоже совпадал */
 }
