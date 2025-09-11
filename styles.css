@@ -1,4 +1,8 @@
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
 html {
   scroll-behavior: smooth; /* scroll */
 }
@@ -13,7 +17,16 @@ body {
   text-align: left;
 }
 
-
+.wrapper {
+    min-height: 100vh; /* растягиваем на всю высоту экрана */
+    display: flex;
+    flex-direction: column;
+}
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
 .header {
   background:  #245654;
   padding: 1rem 3rem;
@@ -45,6 +58,7 @@ h1{
   font-size: 2.5rem;
   text-align: center;
   margin: 0px;
+  margin-bottom: 2rem;
 }
 h2{
   font-weight: 700;
@@ -64,20 +78,19 @@ h2{
   padding-top: 30vh;
   left: 50%;
 }
-/* Стили для фильтра Gender на index.html */
+
 .filters label {
-  font-size: 1.5rem;   /* такой же размер, как у body */
+  font-size: 1.5rem;  
   font-weight: 500;
-  display: flex;       /* выравниваем текст и select по одной линии */
+  display: flex;       
   align-items: center;
-  gap: 0.5rem;         /* небольшой отступ между "Gender:" и селектом */
+  gap: 0.5rem;        
 }
 
 .filters select {
-  font-size: 1.5rem;   /* чтобы совпадал с label */
+  font-size: 1.5rem;   
   padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  border-radius: 8px;
   background-color: #fff;
   color: #1F3D47;
   cursor: pointer;
@@ -93,9 +106,15 @@ h2{
   flex-wrap: wrap;
 }
 
-.products {
+/*.products {
   padding: 3rem;
   background-color: #F6EFD7;
+}*/
+.products {
+    padding: 3rem;
+    background-color: #F6EFD7;
+    width: 100%;
+    box-sizing: border-box; /* чтобы padding не давал лишние отступы */
 }
 
 .product-container img{
@@ -179,7 +198,7 @@ h2{
 }
 .card-price .old-price {
   text-decoration: line-through;
-  color: #999;
+  color: #1F3D47A8;
   margin-right: 8px;
 }
 
@@ -216,7 +235,7 @@ button {
   color:white;
   cursor: pointer;
   border: none;
-  
+ 
 }
   
 .footer {
@@ -229,6 +248,7 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+
 .social-icons{
   margin-right: 2rem;
 
@@ -335,8 +355,7 @@ main .loader {
 .product-form select {
   font-size: 1.5rem; 
   padding: 0.4rem 0.8rem; 
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  border-radius: px;
   background-color: #fff;
   color: #1F3D47;
   cursor: pointer;
@@ -404,13 +423,34 @@ main .loader {
   padding: 2rem;
   box-shadow: 0 4px 8px 0 rgba(31, 61, 71, 0.2);
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .cart-summary .cta-button {
   align-self: flex-start;
   margin-top: 0.5rem;
 }
+.cart-total{
+  color: #c23833;
+}
+
 .remove-link {
   text-decoration: underline;
   cursor: pointer;
 }
 
+.main-content-conf {
+  background-color: #F6EFD7;
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conf-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  text-align: center;
+  gap: 1.5rem; 
+  }

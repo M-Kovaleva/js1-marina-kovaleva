@@ -10,48 +10,50 @@
 
 </head>
 <body>
-    <header class="header">
-        <a href="index.html"><img src="Logo/Logo.png" class="logo" ></a>
-        <nav class="nav">
-            <a href="index.html" aria-label="shopping cart" title="Cataloge"><i class="fa-solid fa-house"></i></a>  
-            <a href="cart.html" aria-label="shopping cart" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a>  
-        </nav>
-    </header>
+    <div class="wrapper">
+        <header class="header">
+            <a href="index.html"><img src="Logo/Logo.png" class="logo" ></a>
+            <nav class="nav">
+                <a href="index.html" aria-label="shopping cart" title="Cataloge"><i class="fa-solid fa-house"></i></a>  
+                <a href="cart.html" aria-label="shopping cart" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a>  
+            </nav>
+        </header>
     
-    <main class="main-content">
-        <section class="hero">
-            <h1>Beyond the ordinary.</h1>
-            <button class="cta-button">Catalog</button>
-        </section>
+        <main class="main-content">
+            <section class="hero">
+                <h1>Beyond the ordinary.</h1>
+                <button class="cta-button">Catalog</button>
+            </section>
         
-        <section id="products" class="products">
-            <h2>Catalog</h2>
-            <div class="filters">
-                <form id="filters-form">
-                    <label>
-                        Gender:
-                        <select name="gender" id="filter-gender">
-                            <option value="">All</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                        </select>
-                    </label>
-                <button class="button" type="submit">Apply</button>
-                <button class="button" type="reset" id="filters-reset">Reset</button>
-                </form>
+            <section id="products" class="products">
+                <h2>Catalog</h2>
+                <div class="filters">
+                    <form id="filters-form">
+                        <label>
+                            Gender:
+                            <select name="gender" id="filter-gender">
+                                <option value="">All</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </label>
+                        <button class="button" type="submit">Apply</button>
+                        <button class="button" type="reset" id="filters-reset">Reset</button>
+                    </form>
+                </div>
+                <div class="loader" id="loader"></div>
+                <div id="products-error" class="error"></div>
+                <div id="container" class="container"></div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>© Rainy Days</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" aria-label="link to facebook page" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com" aria-label="link to instagram page" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com" aria-label="link to youtube page" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
             </div>
-            <div class="loader" id="loader"></div>
-            <div id="products-error" class="error"></div>
-            <div id="container" class="container"></div>
-        </section>
-    </main>
-    <footer class="footer">
-        <p>© Rainy Days</p>
-        <div class="social-icons">
-            <a href="https://www.facebook.com" aria-label="link to facebook page" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com" aria-label="link to instagram page" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com" aria-label="link to youtube page" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 </html>
