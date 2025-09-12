@@ -10,7 +10,8 @@
    
 </head>
 <body>
-     <header class="header">
+    <div class="wrapper">
+        <header class="header">
         <a href="index.html"><img src="Logo/Logo.png" class="logo" ></a>
         <nav class="nav">
             <a href="index.html" aria-label="shopping cart" title="Cataloge"><i class="fa-solid fa-house"></i></a>  
@@ -18,27 +19,19 @@
         </nav>
     </header>
     <main class="main-content">
-
-        <section id="products" class="products">
             <div class="nav-page">
-                <nav>
-                    <a href="index.html">Catalog ></a>
-                    <a href="product.html" class="active">Product</a>
-                </nav>
-                
-            </div>
+                <a href="index.html">Catalog ></a>
+                <a href="product.html" class="active">Product</a>
+            </div> 
             <div class="loader" id="loader"></div>
             <div id="products-error" class="error"></div>
             <div id="product-container" class="product-container"></div>
             <div class="nav-actions">
                 <a href="index.html" class="active">Keep shopping</a>
-                <a href="cart.html" class="active">To checkout</a>
+                <a href="cart.html" class="active">To cart</a>
             </div>
-                
-        </section>
-        
     </main>
-   <footer class="footer">
+    <footer class="footer">
         <p>© Rainy Days</p>
         <div class="social-icons">
             <a href="https://www.facebook.com" aria-label="link to facebook page" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
@@ -46,6 +39,8 @@
             <a href="https://www.youtube.com" aria-label="link to youtube page" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
         </div>
     </footer>
+    </div>
+     
 </body>
 
 </html>

@@ -9,7 +9,7 @@
     <script src="js/cart.js" defer ></script>
 </head>
 <body>
-  
+     <div class="wrapper">
         <header class="header">
             <a href="index.html"><img src="Logo/Logo.png" class="logo" ></a>
             <nav class="nav">
@@ -19,16 +19,11 @@
         </header>
         
         <main class="main-content">
-            
-
             <section id="cart-container" class="cart-container">
-                <div class="nav-page">
-                    <nav>
+                    <div class="nav-page">
                         <a href="index.html">Catalog ></a>
                         <a href="cart.html" class="active">Cart</a>
-                    </nav>
-                    
-                </div>
+                    </div>
                 <h1>Shopping cart</h1>
                 <div class="loader" id="loader"></div>
                 <div id="cart-empty" hidden>Your cart is empty.</div>
@@ -39,7 +34,10 @@
                     <a id="checkout-button" class="cta-button" href="confirmation.html">Place order</a>
                     <div id="cart-error" class="error" hidden></div>
                 </div>
+                <div class="nav-actions">
                 <a href="index.html" class="active">Keep shopping</a>
+   
+                </div>
             </section>
         </main>
         <footer class="footer">
@@ -50,7 +48,6 @@
                 <a href="https://www.youtube.com" aria-label="link to youtube page" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
             </div>
         </footer>
-
-        
+     </div>
 </body>
 </html>

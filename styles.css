@@ -7,7 +7,6 @@ html {
   scroll-behavior: smooth; /* scroll */
 }
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
@@ -17,16 +16,14 @@ body {
   text-align: left;
 }
 
-.wrapper {
-    min-height: 100vh; /* растягиваем на всю высоту экрана */
-    display: flex;
-    flex-direction: column;
+.wrapper{
+  background-color: #F6EFD7;
+  min-height: 100vh;       /* растягиваем на всю высоту окна */
+  display: flex;
+  flex-direction: column;
 }
-.main-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
+
+
 .header {
   background:  #245654;
   padding: 1rem 3rem;
@@ -37,6 +34,12 @@ body {
 }
 .header a{
   margin-right: 1rem;
+}
+.main-content{
+  background-color: #F6EFD7;
+  flex: 1;                 /* занимает всё оставшееся место */
+  display: flex;
+  flex-direction: column;
 }
 .logo {
   border-radius: 0;
@@ -49,7 +52,7 @@ body {
 .hero {
   background: url('Images/Men-ski.jpg') center top no-repeat;
   background-size: cover;
-  min-height: 80vh;
+  height: 100vh;
   color: white;
   text-align: center;
   padding: 3rem 1rem;
@@ -78,6 +81,9 @@ h2{
   padding-top: 30vh;
   left: 50%;
 }
+.filters{
+  margin: 3rem 0 2rem 0;
+}
 
 .filters label {
   font-size: 1.5rem;  
@@ -97,7 +103,7 @@ h2{
 }
 
 .filters option {
-  font-size: 1.5rem;   /* в выпадающем списке тоже */
+  font-size: 1.5rem; 
 }
 #filters-form {
   display: flex;
@@ -112,9 +118,8 @@ h2{
 }*/
 .products {
     padding: 3rem;
-    background-color: #F6EFD7;
     width: 100%;
-    box-sizing: border-box; /* чтобы padding не давал лишние отступы */
+    box-sizing: border-box; 
 }
 
 .product-container img{
@@ -124,10 +129,7 @@ h2{
 }
 
   
-.cart-container{
-    padding: 2rem;
-    background-color: #F6EFD7;;
-}
+
 
 .container {
   /*max-width: 1440px;*/
@@ -180,13 +182,6 @@ h2{
   flex-grow: 1;
 }
 
-.card-title {
-  margin: 0.5rem 0;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color:  #1F3D47;;
-  margin-bottom: 10px;
-}
 .product-title {
   color:#1F3D47;;
 }
@@ -288,7 +283,7 @@ main .loader {
 .product-details {
   background: white;
   border-radius: 10px;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -341,7 +336,10 @@ main .loader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2rem;
+  margin: 3rem;
+}
+.nav-page{
+  margin: 3rem;
 }
 
 .active{
@@ -364,7 +362,17 @@ main .loader {
 .product-form option {
   font-size: 1.5rem; 
 }
+.cart-container{
 
+    background-color: #F6EFD7;;
+}
+.card-title {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color:  #1F3D47;;
+  margin-bottom: 10px;
+}
 .cart-list {
   display: flex;
   flex-direction: column;
@@ -382,7 +390,11 @@ main .loader {
   border-radius: 8px;
   padding-left: 2rem;
   padding-right: 2rem;
+  margin: 0.5rem 3rem;
 
+}
+#cart-empty{
+  margin: 3rem;
 }
 
 .cart-item h3{
@@ -422,8 +434,8 @@ main .loader {
   border-radius: 8px;
   padding: 2rem;
   box-shadow: 0 4px 8px 0 rgba(31, 61, 71, 0.2);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 0 3rem;
+
 }
 .cart-summary .cta-button {
   align-self: flex-start;
@@ -438,13 +450,7 @@ main .loader {
   cursor: pointer;
 }
 
-.main-content-conf {
-  background-color: #F6EFD7;
-  flex: 1; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .conf-container {
   display: flex;
   flex-direction: column;
@@ -452,5 +458,8 @@ main .loader {
   align-items: center;
   min-height: 60vh;
   text-align: center;
-  gap: 1.5rem; 
+  gap: 3rem; 
+  }
+  .conf-container h1{
+    margin-bottom: 0;
   }
