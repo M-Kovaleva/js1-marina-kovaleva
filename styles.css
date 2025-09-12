@@ -372,7 +372,7 @@ main .loader {
   flex-direction: column;
   align-items: center;
   width: 100%;        /* на всю доступную ширину */
-  max-width: 800px;   /* общая ширина для cart-item и cart-summary */
+  max-width: 1000px;   /* общая ширина для cart-item и cart-summary */
   box-sizing: border-box;
   margin: 0 auto;     /* выравниваем по центру */
   padding: 0 3rem;
@@ -411,7 +411,7 @@ main .loader {
   padding-right: 2rem;
   margin: 0.5rem 3rem 0.25rem 3rem;
   width: 100%;          /* растягивается на всю ширину контейнера */
-  max-width: 800px;     /* одинаковый лимит ширины */
+  max-width: 1000px;     /* одинаковый лимит ширины */
   box-sizing: border-box;
 
 
