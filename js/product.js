@@ -16,10 +16,11 @@ async function fetchAndCreateProducts() {
             return
         }
         
-
         const responce = await fetch(`${API_URL}/${id}`)
         const data = await responce.json()
+
         /*await new Promise(res => setTimeout(res, 2000)) /* check loader*/
+
         const product = data.data
 
         const productDiv = document.createElement("div")
@@ -32,8 +33,6 @@ async function fetchAndCreateProducts() {
         const sizeSelect = document.createElement("select")
         const addButton = document.createElement("button")
 
-       
-
         productDiv.className = 'product-details'
         image.className = 'product-image'
         title.className = 'product-title'
@@ -42,7 +41,6 @@ async function fetchAndCreateProducts() {
         form.className = 'product-form'
         sizeLabel.textContent = 'Size: '
         addButton.className = 'cta-button'
-    
 
         image.src = product.image.url
         image.alt = product.image.alt
@@ -75,8 +73,6 @@ async function fetchAndCreateProducts() {
             alert( `1 x ${product.title} (Size: ${selectedSize}) added to cart`)
         })
       
-        
-        
         sizeLabel.appendChild(sizeSelect)
         form.appendChild(sizeLabel);
         form.appendChild(addButton)

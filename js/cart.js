@@ -24,7 +24,7 @@ function renderCart() {
       cartEmpty.hidden = false;
       cartCount.textContent = "0";
       cartTotal.textContent = "0";
-      checkoutButton.style.display = "none"// hide "Plase order" button when cart is empty
+      checkoutButton.style.display = "none"// hide "Place order" button when cart is empty
       hideLoader();
       return;
     }
@@ -33,6 +33,8 @@ function renderCart() {
     let total = 0;
     let count = 0;
 
+    /*throw new Error("Test error in renderCart")/*error checking*/
+
     cart.forEach((item, index) => {
 
       const itemDiv = document.createElement("div")
@@ -40,7 +42,7 @@ function renderCart() {
       const title = document.createElement("h3");
       const size = document.createElement("p");
       const price = document.createElement("p");
-      const removeBtn = document.createElement("active");
+      const removeBtn = document.createElement("span");
       
       itemDiv.className = "cart-item"
       img.className = "cart-item-image"
@@ -73,8 +75,12 @@ function renderCart() {
 
     checkoutButton.style.display = count > 0 ? "inline-block" : "none";  // show "Plase order" button if there are products
 
-  } catch (err) {
-    console.error("Error rendering cart", err);
+  } catch (error) {
+    console.error("Error rendering cart", error);
+    cartError.textContent = "Failed to load cart. Try again later.";
+    cartError.hidden = false;
+    cartItemsContainer.innerHTML = ""
+    checkoutButton.style.display = "none"
   } finally {
     hideLoader();
   }
