@@ -367,6 +367,22 @@ main .loader {
   flex-direction: column;
   align-items: center;
 }
+.cart-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;        /* на всю доступную ширину */
+  max-width: 800px;   /* общая ширина для cart-item и cart-summary */
+  box-sizing: border-box;
+  margin: 0 auto;     /* выравниваем по центру */
+  padding: 0 3rem;
+
+}
+.cart-list,
+.cart-summary {
+  width: 100%;        /* обе секции теперь всегда одинаковой ширины */
+  box-sizing: border-box;
+}
 .card-title {
   margin: 0.5rem 0;
   font-size: 1.5rem;
@@ -394,7 +410,9 @@ main .loader {
   padding-left: 2rem;
   padding-right: 2rem;
   margin: 0.5rem 3rem 0.25rem 3rem;
-  min-width: 50%;
+  width: 100%;          /* растягивается на всю ширину контейнера */
+  max-width: 800px;     /* одинаковый лимит ширины */
+  box-sizing: border-box;
 
 
 }
@@ -410,7 +428,11 @@ main .loader {
   color: #1F3D47;
   line-height: 1.6;
   text-align: left;
+  flex: 1;              /* занимает оставшееся место */
+      /* позволяет перенос строк */
+
 }
+
 .cart-item h3, p{
   margin: 0;
 }
@@ -432,6 +454,7 @@ main .loader {
   border-radius: 10px;
   padding: 2rem;
   margin: 0.5rem 3rem 0 3rem;
+
 
 
 }
