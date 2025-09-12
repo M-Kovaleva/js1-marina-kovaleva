@@ -19,7 +19,7 @@ async function fetchAndCreateProducts() {
         const responce = await fetch(`${API_URL}/${id}`)
         const data = await responce.json()
 
-        /*await new Promise(res => setTimeout(res, 2000)) /* check loader*/
+        /*await new Promise(res => setTimeout(res, 2000)) // check loader*/
 
         const product = data.data
 
@@ -32,6 +32,7 @@ async function fetchAndCreateProducts() {
         const sizeLabel = document.createElement("label")
         const sizeSelect = document.createElement("select")
         const addButton = document.createElement("button")
+        const goToCartBtn = document.createElement("a")
 
         productDiv.className = 'product-details'
         image.className = 'product-image'
@@ -41,6 +42,7 @@ async function fetchAndCreateProducts() {
         form.className = 'product-form'
         sizeLabel.textContent = 'Size: '
         addButton.className = 'cta-button'
+        goToCartBtn.className = "active"
 
         image.src = product.image.url
         image.alt = product.image.alt
@@ -65,6 +67,8 @@ async function fetchAndCreateProducts() {
 
         addButton.type = "submit";
         addButton.textContent = "Add to cart"
+        goToCartBtn.href = "cart.html";
+        goToCartBtn.textContent = "Go to cart";
 
         form.addEventListener("submit", (e) => {
             e.preventDefault()
@@ -76,17 +80,19 @@ async function fetchAndCreateProducts() {
         sizeLabel.appendChild(sizeSelect)
         form.appendChild(sizeLabel);
         form.appendChild(addButton)
+        form.appendChild(goToCartBtn)
+      
 
         productDiv.appendChild(image)
         productDiv.appendChild(title)
         productDiv.appendChild(price)
         productDiv.appendChild(description)
         productDiv.appendChild(form)
+       
 
         container.appendChild(productDiv)
 
     } catch (error) {
-        console.error("Failed to fetch product", error)
         errorContainer.textContent = "Failed to load product. Try again later."
         errorContainer.hidden = false
         container.innerHTML = ""

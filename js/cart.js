@@ -33,7 +33,7 @@ function renderCart() {
     let total = 0;
     let count = 0;
 
-    /*throw new Error("Test error in renderCart")/*error checking*/
+    /*throw new Error("Test error in renderCart")//error checking*/
 
     cart.forEach((item, index) => {
 
@@ -76,7 +76,6 @@ function renderCart() {
     checkoutButton.style.display = count > 0 ? "inline-block" : "none";  // show "Plase order" button if there are products
 
   } catch (error) {
-    console.error("Error rendering cart", error);
     cartError.textContent = "Failed to load cart. Try again later.";
     cartError.hidden = false;
     cartItemsContainer.innerHTML = ""

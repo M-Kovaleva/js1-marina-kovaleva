@@ -14,12 +14,11 @@ async function fetchAndCreateProducts() {
   try{
     const responce = await fetch(API_URL)
     const data = await responce.json()
-    /*await new Promise(res => setTimeout(res, 2000)) /* Check loader */
+    /*await new Promise(res => setTimeout(res, 2000)) // Check loader */
     allProducts = data.data
 
     renderProducts(allProducts)
   } catch (error) {
-    console.error("Failed to fetch and create products", error)
     errorContainer.textContent = "Failed to load items. Try again later."
     errorContainer.hidden = false;
     } 
