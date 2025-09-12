@@ -3,7 +3,9 @@ const container = document.querySelector("#container")
 const loader = document.querySelector("#loader")
 const form = document.querySelector("#filters-form")
 const resetBtn = document.querySelector("#filters-reset")
+const errorContainer = document.querySelector("#products-error")
 const API_URL = "https://v2.api.noroff.dev/rainy-days"
+
 
 let allProducts = []
 
@@ -18,6 +20,8 @@ async function fetchAndCreateProducts() {
     renderProducts(allProducts)
   } catch (err) {
     console.error("Failed to fetch and create products", err)
+    errorContainer.textContent = "Failed to load items. Try again later."
+    errorContainer.hidden = false;
     } 
     finally {
     hideLoader()

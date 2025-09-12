@@ -1,4 +1,3 @@
-
 html, body {
     height: 100%;
     margin: 0;
@@ -18,7 +17,7 @@ body {
 
 .wrapper{
   background-color: #F6EFD7;
-  min-height: 100vh;       /* растягиваем на всю высоту окна */
+  min-height: 100vh;     
   display: flex;
   flex-direction: column;
 }
@@ -37,7 +36,7 @@ body {
 }
 .main-content{
   background-color: #F6EFD7;
-  flex: 1;                 /* занимает всё оставшееся место */
+  flex: 1;           
   display: flex;
   flex-direction: column;
 }
@@ -371,16 +370,16 @@ main .loader {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;        /* на всю доступную ширину */
-  max-width: 1000px;   /* общая ширина для cart-item и cart-summary */
+  width: 100%;       
+  max-width: 1000px;   
   box-sizing: border-box;
-  margin: 0 auto;     /* выравниваем по центру */
+  margin: 0 auto;   
   padding: 0 3rem;
 
 }
 .cart-list,
 .cart-summary {
-  width: 100%;        /* обе секции теперь всегда одинаковой ширины */
+  width: 100%; 
   box-sizing: border-box;
 }
 .card-title {
@@ -410,8 +409,8 @@ main .loader {
   padding-left: 2rem;
   padding-right: 2rem;
   margin: 0.5rem 3rem 0.25rem 3rem;
-  width: 100%;          /* растягивается на всю ширину контейнера */
-  max-width: 1000px;     /* одинаковый лимит ширины */
+  width: 100%;          
+  max-width: 1000px;     
   box-sizing: border-box;
 
 
@@ -428,9 +427,7 @@ main .loader {
   color: #1F3D47;
   line-height: 1.6;
   text-align: left;
-  flex: 1;              /* занимает оставшееся место */
-      /* позволяет перенос строк */
-
+  flex: 1;              
 }
 
 .cart-item h3, p{
@@ -484,3 +481,10 @@ main .loader {
   .conf-container h1{
     margin-bottom: 0;
   }
+
+  .error {
+  color: #c23833;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-align: center;
+}
