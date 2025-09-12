@@ -18,8 +18,8 @@ async function fetchAndCreateProducts() {
     allProducts = data.data
 
     renderProducts(allProducts)
-  } catch (err) {
-    console.error("Failed to fetch and create products", err)
+  } catch (error) {
+    console.error("Failed to fetch and create products", error)
     errorContainer.textContent = "Failed to load items. Try again later."
     errorContainer.hidden = false;
     } 

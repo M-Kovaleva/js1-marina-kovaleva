@@ -1,5 +1,6 @@
 const container = document.querySelector("#product-container")
 const loader = document.querySelector("#loader")
+const errorContainer = document.querySelector("#products-error")
 const API_URL = "https://v2.api.noroff.dev/rainy-days"
 
 async function fetchAndCreateProducts() {
@@ -9,9 +10,12 @@ async function fetchAndCreateProducts() {
         const id = params.get("id")
 
         if (!id) {
-            container.textContent = "No product ID provided!"
+            errorContainer.textContent = "No product ID provided!"
+            errorContainer.hidden = false
+            container.innerHTML = ""
             return
         }
+        
 
         const responce = await fetch(`${API_URL}/${id}`)
         const data = await responce.json()
@@ -86,8 +90,10 @@ async function fetchAndCreateProducts() {
         container.appendChild(productDiv)
 
     } catch (error) {
-        console.error("Failed to fetch product", err)
-        container.textContent = 'Failed to load product'
+        console.error("Failed to fetch product", error)
+        errorContainer.textContent = "Failed to load product. Try again later."
+        errorContainer.hidden = false
+        container.innerHTML = ""
     } finally {
     hideLoader()
   }
