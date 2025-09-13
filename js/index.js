@@ -58,7 +58,7 @@ function renderProducts(products) {
       price.textContent = `$${product.price}`;
     }
 
-    
+
       anchor.href = `product.html?id=${product.id}`
     
 
@@ -76,16 +76,15 @@ function renderProducts(products) {
 
 //Filter
 form.addEventListener("submit", (event) => {
-  event.preventDefault()
+  event.preventDefault();
 
-  const gender = document.querySelector("#filter-gender").value
+  const gender = document.querySelector("#filter-gender").value;
+  const filteredProducts = allProducts.filter(
+    (item) => !gender || item.gender === gender
+  );
 
-  allProducts
-    .filter((filteredPrdc) => !gender || filteredPrdc.gender === gender) 
-    .map((filteredPrdc) => filteredPrdc) 
-    .forEach(() => {}) 
-  renderProducts(allProducts.filter((filteredPrdc) => !gender || filteredPrdc.gender === gender))
-})
+  renderProducts(filteredProducts);
+});
 
 
 resetBtn.addEventListener("click", () => {
