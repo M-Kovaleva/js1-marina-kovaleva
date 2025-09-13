@@ -14,7 +14,7 @@ async function fetchAndCreateProducts() {
   try{
     const responce = await fetch(API_URL)
     const data = await responce.json()
-    /*await new Promise(res => setTimeout(res, 2000)) // Check loader */
+    //await new Promise(res => setTimeout(res, 2000)) // Check loader
     allProducts = data.data
 
     renderProducts(allProducts)
@@ -50,6 +50,7 @@ function renderProducts(products) {
     title.textContent = product.title
     price.textContent = product.price
     
+    //Sale
     if (product.onSale) {
       price.innerHTML = `<span class="old-price">$${product.price}</span> $${product.discountedPrice}`;
     } 
@@ -57,6 +58,7 @@ function renderProducts(products) {
       price.textContent = `$${product.price}`;
     }
 
+    
       anchor.href = `product.html?id=${product.id}`
     
 
@@ -72,33 +74,25 @@ function renderProducts(products) {
   }    
     
 
-/* Filter */
-
+//Filter
 form.addEventListener("submit", (event) => {
   event.preventDefault()
 
-  const gender = document.querySelector("#filter-gender").value;
-  let filtered = [...allProducts];
+  const gender = document.querySelector("#filter-gender").value
 
-  if (gender) {
-    filtered = filtered.filter((p) => p.gender === gender);
-  }
-  
-  renderProducts(filtered);
+  allProducts
+    .filter((filteredPrdc) => !gender || filteredPrdc.gender === gender) 
+    .map((filteredPrdc) => filteredPrdc) 
+    .forEach(() => {}) 
+  renderProducts(allProducts.filter((filteredPrdc) => !gender || filteredPrdc.gender === gender))
 })
-resetBtn.addEventListener("click", () => {
-  
-  renderProducts(allProducts); 
-})
-
 
 
 resetBtn.addEventListener("click", () => {
   renderProducts(allProducts);
 });
 
-
-
+//Loader
 function showLoader() {
   loader.style.display = "block";
   container.style.display = "none";
@@ -108,9 +102,8 @@ function hideLoader() {
   loader.style.display = "none";
   container.style.display = "grid";
 }
-fetchAndCreateProducts()
 
-/* Scroll*/
+//Scroll
 const catalogBtn = document.querySelector(".cta-button");
 const productsSection = document.querySelector("#products");
 
@@ -119,3 +112,7 @@ if (productsSection) {
     productsSection.scrollIntoView({ behavior: "smooth" });
   });
 }
+
+fetchAndCreateProducts()
+
+
