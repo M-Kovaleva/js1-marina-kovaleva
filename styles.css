@@ -3,7 +3,7 @@ html, body {
     margin: 0;
 }
 html {
-  scroll-behavior: smooth; /* scroll */
+  scroll-behavior: smooth;
 }
 body {
   font-family: Arial, sans-serif;

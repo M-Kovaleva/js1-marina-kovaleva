@@ -91,13 +91,13 @@ resetBtn.addEventListener("click", () => {
   renderProducts(allProducts); 
 })
 
-/* Reset */
+
 
 resetBtn.addEventListener("click", () => {
   renderProducts(allProducts);
 });
 
-/* Loader */
+
 
 function showLoader() {
   loader.style.display = "block";
@@ -110,7 +110,7 @@ function hideLoader() {
 }
 fetchAndCreateProducts()
 
-/* Scroll to Products */
+/* Scroll*/
 const catalogBtn = document.querySelector(".cta-button");
 const productsSection = document.querySelector("#products");
 

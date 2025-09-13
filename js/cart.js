@@ -4,7 +4,7 @@ const cartTotal = document.querySelector("#cart-total");
 const cartEmpty = document.querySelector("#cart-empty");
 const loader = document.querySelector("#loader");
 const cartError = document.querySelector("#cart-error");
-const checkoutButton = document.querySelector("#checkout-button"); // "Place order" button
+const checkoutButton = document.querySelector("#checkout-button"); 
 
 function getCart() {
   return JSON.parse(localStorage.getItem("cart")) || [];
@@ -24,7 +24,7 @@ function renderCart() {
       cartEmpty.hidden = false;
       cartCount.textContent = "0";
       cartTotal.textContent = "0";
-      checkoutButton.style.display = "none"// hide "Place order" button when cart is empty
+      checkoutButton.style.display = "none"
       hideLoader();
       return;
     }
@@ -73,7 +73,7 @@ function renderCart() {
     cartCount.textContent = count;
     cartTotal.textContent = total.toFixed(2);
 
-    checkoutButton.style.display = count > 0 ? "inline-block" : "none";  // show "Plase order" button if there are products
+    checkoutButton.style.display = count > 0 ? "inline-block" : "none";  
 
   } catch (error) {
     cartError.textContent = "Failed to load cart. Try again later.";
@@ -100,7 +100,7 @@ function hideLoader() {
   loader.style.display = "none";
 }
 
-// clean cart 
+
 checkoutButton.addEventListener("click", () => {
   localStorage.removeItem("cart")
 });
