@@ -20,7 +20,7 @@ async function fetchAndCreateProducts() {
     renderProducts(allProducts)
   } catch (error) {
     errorContainer.textContent = "Failed to load items. Try again later."
-    errorContainer.hidden = false;
+    errorContainer.hidden = false
     } 
     finally {
     hideLoader()
@@ -52,10 +52,10 @@ function renderProducts(products) {
     
     //Sale
     if (product.onSale) {
-      price.innerHTML = `<span class="old-price">$${product.price}</span> $${product.discountedPrice}`;
+      price.innerHTML = `<span class="old-price">$${product.price}</span> $${product.discountedPrice}`
     } 
     else {
-      price.textContent = `$${product.price}`;
+      price.textContent = `$${product.price}`
     }
 
 
@@ -76,40 +76,40 @@ function renderProducts(products) {
 
 //Filter
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
+  event.preventDefault()
 
-  const gender = document.querySelector("#filter-gender").value;
+  const gender = document.querySelector("#filter-gender").value
   const filteredProducts = allProducts.filter(
     (item) => !gender || item.gender === gender
-  );
+  )
 
-  renderProducts(filteredProducts);
-});
+  renderProducts(filteredProducts)
+})
 
 
 resetBtn.addEventListener("click", () => {
   renderProducts(allProducts);
-});
+})
 
 //Loader
 function showLoader() {
-  loader.style.display = "block";
-  container.style.display = "none";
+  loader.style.display = "block"
+  container.style.display = "none"
 }
 
 function hideLoader() {
-  loader.style.display = "none";
-  container.style.display = "grid";
+  loader.style.display = "none"
+  container.style.display = "grid"
 }
 
 //Scroll
-const catalogBtn = document.querySelector(".cta-button");
-const productsSection = document.querySelector("#products");
+const catalogBtn = document.querySelector(".cta-button")
+const productsSection = document.querySelector("#products")
 
 if (productsSection) {
   catalogBtn.addEventListener("click", () => {
-    productsSection.scrollIntoView({ behavior: "smooth" });
-  });
+    productsSection.scrollIntoView({ behavior: "smooth" })
+  })
 }
 
 fetchAndCreateProducts()

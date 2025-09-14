@@ -50,14 +50,14 @@ async function fetchAndCreateProducts() {
 
         price.textContent = `$${product.price}`
         if (product.onSale) {
-            price.innerHTML = `<span class="old-price">$${product.price}</span> $${product.discountedPrice}`;
+            price.innerHTML = `<span class="old-price">$${product.price}</span> $${product.discountedPrice}`
         } else {
             price.textContent = `$${product.price}`
         }
 
         description.textContent = product.description
 
-        sizeSelect.name = "size";
+        sizeSelect.name = "size"
         product.sizes.forEach(size => {
             const option = document.createElement("option")
             option.value = size
@@ -65,10 +65,10 @@ async function fetchAndCreateProducts() {
             sizeSelect.appendChild(option)
         })
 
-        addButton.type = "submit";
+        addButton.type = "submit"
         addButton.textContent = "Add to cart"
-        goToCartBtn.href = "cart.html";
-        goToCartBtn.textContent = "Go to cart";
+        goToCartBtn.href = "cart.html"
+        goToCartBtn.textContent = "Go to cart"
 
         form.addEventListener("submit", (e) => {
             e.preventDefault()
@@ -78,7 +78,7 @@ async function fetchAndCreateProducts() {
         })
       
         sizeLabel.appendChild(sizeSelect)
-        form.appendChild(sizeLabel);
+        form.appendChild(sizeLabel)
         form.appendChild(addButton)
         form.appendChild(goToCartBtn)
       
@@ -102,7 +102,7 @@ async function fetchAndCreateProducts() {
   
 }
 function addToCart(product, size) {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cart = JSON.parse(localStorage.getItem("cart")) || []
   cart.push({
     id: product.id,
     title: product.title,
@@ -110,16 +110,16 @@ function addToCart(product, size) {
     price: product.onSale ? product.discountedPrice : product.price,
     image: product.image
   });
-  localStorage.setItem("cart", JSON.stringify(cart));
+  localStorage.setItem("cart", JSON.stringify(cart))
 }
 function showLoader() {
-  loader.style.display = "block";
-  container.style.display = "none";
+  loader.style.display = "block"
+  container.style.display = "none"
 }
 
 function hideLoader() {
-  loader.style.display = "none";
-  container.style.display = "grid";
+  loader.style.display = "none"
+  container.style.display = "grid"
 }
 
 fetchAndCreateProducts()
