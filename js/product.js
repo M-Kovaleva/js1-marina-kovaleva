@@ -42,7 +42,7 @@ async function fetchAndCreateProducts() {
         form.className = 'product-form'
         sizeLabel.textContent = 'Size: '
         addButton.className = 'cta-button'
-        goToCartBtn.className = "active"
+        goToCartBtn.className = "nav-page-active"
 
         image.src = product.image.url
         image.alt = product.image.alt
